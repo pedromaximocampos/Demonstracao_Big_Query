@@ -1,0 +1,106 @@
+[
+  {
+    "_id": "1",
+    "name": "João Silva",
+    "created_at": "2025-06-20T11:15:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 2 },
+      { "name": "Guaraná 1L", "sku": "GUA-1L", "price": 6.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "2",
+    "name": "Maria Oliveira",
+    "created_at": "2025-06-22T13:30:00Z",
+    "products": [
+      { "name": "Pão de Queijo", "sku": "PQ-001", "price": 5.0, "quantity": 5 },
+      { "name": "Coca-Cola 2L", "sku": "CC-2L", "price": 8.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "3",
+    "name": "Carlos Lima",
+    "created_at": "2025-06-25T18:00:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 3 }
+    ]
+  },
+  {
+    "_id": "4",
+    "name": "Ana Souza",
+    "created_at": "2025-06-28T09:45:00Z",
+    "products": [
+      { "name": "Suco Natural", "sku": "SN-001", "price": 7.0, "quantity": 2 },
+      {
+        "name": "Esfiha de Carne",
+        "sku": "EF-001",
+        "price": 4.5,
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "_id": "5",
+    "name": "João Silva",
+    "created_at": "2025-06-30T17:30:00Z",
+    "products": [
+      { "name": "Coca-Cola 2L", "sku": "CC-2L", "price": 8.5, "quantity": 1 },
+      { "name": "Pão de Queijo", "sku": "PQ-001", "price": 5.0, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "6",
+    "name": "Bruna Rocha",
+    "created_at": "2025-07-01T15:00:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 2 },
+      { "name": "Suco Natural", "sku": "SN-001", "price": 7.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "7",
+    "name": "Maria Oliveira",
+    "created_at": "2025-07-03T08:40:00Z",
+    "products": [
+      {
+        "name": "Esfiha de Carne",
+        "sku": "EF-001",
+        "price": 4.5,
+        "quantity": 3
+      },
+      { "name": "Guaraná 1L", "sku": "GUA-1L", "price": 6.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "8",
+    "name": "Carlos Lima",
+    "created_at": "2025-07-04T12:20:00Z",
+    "products": [
+      { "name": "Pão de Queijo", "sku": "PQ-001", "price": 5.0, "quantity": 1 },
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "9",
+    "name": "João Silva",
+    "created_at": "2025-07-05T18:10:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 1 },
+      { "name": "Guaraná 1L", "sku": "GUA-1L", "price": 6.5, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "10",
+    "name": "Bruna Rocha",
+    "created_at": "2025-07-06T10:00:00Z",
+    "products": [
+      {
+        "name": "Esfiha de Carne",
+        "sku": "EF-001",
+        "price": 4.5,
+        "quantity": 2
+      },
+      { "name": "Suco Natural", "sku": "SN-001", "price": 7.0, "quantity": 1 }
+    ]
+  }
+]

@@ -10,7 +10,7 @@ import json
 # e realizar a conexão com o BigQuery:
 
 credenciais  = service_account.Credentials.from_service_account_file(
-   "teste3-465312-1c683bdf8ce0.json"
+   "teste5-465314-5743e2d188a4.json"
 )
 
 cliente = bigquery.Client(credentials=credenciais)
@@ -480,7 +480,7 @@ exemplos = [
 ]
 
 
-dataset_id = "teste3-465312.TesteBigQuery.VendasLBC"
+dataset_id = "teste5-465314.TesteBigQuery.VendasLBC2"
 
 # 4. Inserir dados no BigQuery:
 def inserir_dados_bigquery():
@@ -563,7 +563,6 @@ def inserir_dados_bigquery_via_query():
 
       
 # 5. Ler dados da tabela - FORMA SIMPLES SEM PANDAS:
-
 def ler_dados_bigquery():
    """Visualização simples dos dados - SEM pandas"""
    try:

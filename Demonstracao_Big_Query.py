@@ -5,12 +5,12 @@
 
 from google.cloud import bigquery
 from google.oauth2 import service_account
-
+import json
 # 3. Configurar a autenticação com o arquivo de credenciais criado no Google Cloud Platform 
 # e realizar a conexão com o BigQuery:
 
 credenciais  = service_account.Credentials.from_service_account_file(
-   "probable-bebop-386417-cb2d4c63c982.json"
+   "teste3-465312-1c683bdf8ce0.json"
 )
 
 cliente = bigquery.Client(credentials=credenciais)
@@ -119,11 +119,368 @@ exemplos = [
       },
       { "name": "Suco Natural", "sku": "SN-001", "price": 7.0, "quantity": 1 }
     ]
+  },
+  {
+    "_id": "11",
+    "name": "Pedro Santos",
+    "created_at": "2025-07-07T09:30:00Z",
+    "products": [
+      { "name": "Pastel de Frango", "sku": "PF-001", "price": 5.5, "quantity": 2 },
+      { "name": "Café Expresso", "sku": "CF-001", "price": 4.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "12",
+    "name": "Lucia Costa",
+    "created_at": "2025-07-08T14:20:00Z",
+    "products": [
+      { "name": "Açaí 500ml", "sku": "AC-500", "price": 12.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "13",
+    "name": "João Silva",
+    "created_at": "2025-07-09T16:45:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 1 },
+      { "name": "Água Mineral", "sku": "AG-001", "price": 3.0, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "14",
+    "name": "Roberto Ferreira",
+    "created_at": "2025-07-10T11:15:00Z",
+    "products": [
+      { "name": "Sanduíche Natural", "sku": "SN-002", "price": 9.0, "quantity": 1 },
+      { "name": "Guaraná 1L", "sku": "GUA-1L", "price": 6.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "15",
+    "name": "Fernanda Alves",
+    "created_at": "2025-07-11T13:00:00Z",
+    "products": [
+      { "name": "Cappuccino", "sku": "CP-001", "price": 6.0, "quantity": 2 },
+      { "name": "Croissant", "sku": "CR-001", "price": 7.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "16",
+    "name": "Maria Oliveira",
+    "created_at": "2025-07-12T08:30:00Z",
+    "products": [
+      { "name": "Pão de Queijo", "sku": "PQ-001", "price": 5.0, "quantity": 3 },
+      { "name": "Café Expresso", "sku": "CF-001", "price": 4.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "17",
+    "name": "Marcos Pereira",
+    "created_at": "2025-07-13T15:40:00Z",
+    "products": [
+      { "name": "Torta de Frango", "sku": "TF-001", "price": 8.0, "quantity": 1 },
+      { "name": "Coca-Cola 2L", "sku": "CC-2L", "price": 8.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "18",
+    "name": "Carlos Lima",
+    "created_at": "2025-07-14T12:10:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 2 },
+      { "name": "Suco Natural", "sku": "SN-001", "price": 7.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "19",
+    "name": "Juliana Moreira",
+    "created_at": "2025-07-15T17:25:00Z",
+    "products": [
+      { "name": "Vitamina de Frutas", "sku": "VF-001", "price": 8.5, "quantity": 1 },
+      { "name": "Pastel de Frango", "sku": "PF-001", "price": 5.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "20",
+    "name": "Ana Souza",
+    "created_at": "2025-07-16T10:50:00Z",
+    "products": [
+      { "name": "Esfiha de Carne", "sku": "EF-001", "price": 4.5, "quantity": 4 },
+      { "name": "Guaraná 1L", "sku": "GUA-1L", "price": 6.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "21",
+    "name": "Bruna Rocha",
+    "created_at": "2025-07-17T14:15:00Z",
+    "products": [
+      { "name": "Açaí 500ml", "sku": "AC-500", "price": 12.0, "quantity": 1 },
+      { "name": "Água Mineral", "sku": "AG-001", "price": 3.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "22",
+    "name": "Ricardo Barbosa",
+    "created_at": "2025-07-18T09:20:00Z",
+    "products": [
+      { "name": "Sanduíche Natural", "sku": "SN-002", "price": 9.0, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "23",
+    "name": "João Silva",
+    "created_at": "2025-07-19T16:30:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 3 },
+      { "name": "Coca-Cola 2L", "sku": "CC-2L", "price": 8.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "24",
+    "name": "Camila Rodrigues",
+    "created_at": "2025-07-20T11:45:00Z",
+    "products": [
+      { "name": "Cappuccino", "sku": "CP-001", "price": 6.0, "quantity": 1 },
+      { "name": "Croissant", "sku": "CR-001", "price": 7.5, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "25",
+    "name": "Pedro Santos",
+    "created_at": "2025-07-21T18:00:00Z",
+    "products": [
+      { "name": "Torta de Frango", "sku": "TF-001", "price": 8.0, "quantity": 1 },
+      { "name": "Guaraná 1L", "sku": "GUA-1L", "price": 6.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "26",
+    "name": "Diego Martins",
+    "created_at": "2025-07-22T13:10:00Z",
+    "products": [
+      { "name": "Pastel de Frango", "sku": "PF-001", "price": 5.5, "quantity": 3 },
+      { "name": "Suco Natural", "sku": "SN-001", "price": 7.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "27",
+    "name": "Maria Oliveira",
+    "created_at": "2025-07-23T08:45:00Z",
+    "products": [
+      { "name": "Pão de Queijo", "sku": "PQ-001", "price": 5.0, "quantity": 2 },
+      { "name": "Café Expresso", "sku": "CF-001", "price": 4.0, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "28",
+    "name": "Tatiana Reis",
+    "created_at": "2025-07-24T15:20:00Z",
+    "products": [
+      { "name": "Vitamina de Frutas", "sku": "VF-001", "price": 8.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "29",
+    "name": "Carlos Lima",
+    "created_at": "2025-07-25T12:35:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 1 },
+      { "name": "Esfiha de Carne", "sku": "EF-001", "price": 4.5, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "30",
+    "name": "Gabriel Nascimento",
+    "created_at": "2025-07-26T17:50:00Z",
+    "products": [
+      { "name": "Açaí 500ml", "sku": "AC-500", "price": 12.0, "quantity": 1 },
+      { "name": "Água Mineral", "sku": "AG-001", "price": 3.0, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "31",
+    "name": "João Silva",
+    "created_at": "2025-08-01T12:15:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 4 },
+      { "name": "Guaraná 1L", "sku": "GUA-1L", "price": 6.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "32",
+    "name": "Maria Oliveira",
+    "created_at": "2025-08-01T12:30:00Z",
+    "products": [
+      { "name": "Pão de Queijo", "sku": "PQ-001", "price": 5.0, "quantity": 6 },
+      { "name": "Coca-Cola 2L", "sku": "CC-2L", "price": 8.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "33",
+    "name": "Carlos Lima",
+    "created_at": "2025-08-01T12:45:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 2 },
+      { "name": "Esfiha de Carne", "sku": "EF-001", "price": 4.5, "quantity": 3 }
+    ]
+  },
+  {
+    "_id": "34",
+    "name": "Ana Souza",
+    "created_at": "2025-08-01T13:00:00Z",
+    "products": [
+      { "name": "Sanduíche Natural", "sku": "SN-002", "price": 9.0, "quantity": 1 },
+      { "name": "Suco Natural", "sku": "SN-001", "price": 7.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "35",
+    "name": "João Silva",
+    "created_at": "2025-08-01T15:30:00Z",
+    "products": [
+      { "name": "Açaí 500ml", "sku": "AC-500", "price": 12.0, "quantity": 1 },
+      { "name": "Água Mineral", "sku": "AG-001", "price": 3.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "36",
+    "name": "Bruna Rocha",
+    "created_at": "2025-08-02T08:15:00Z",
+    "products": [
+      { "name": "Cappuccino", "sku": "CP-001", "price": 6.0, "quantity": 1 },
+      { "name": "Croissant", "sku": "CR-001", "price": 7.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "37",
+    "name": "Pedro Santos",
+    "created_at": "2025-08-02T09:00:00Z",
+    "products": [
+      { "name": "Café Expresso", "sku": "CF-001", "price": 4.0, "quantity": 2 },
+      { "name": "Pão de Queijo", "sku": "PQ-001", "price": 5.0, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "38",
+    "name": "Maria Oliveira",
+    "created_at": "2025-08-02T12:20:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 3 },
+      { "name": "Guaraná 1L", "sku": "GUA-1L", "price": 6.5, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "39",
+    "name": "Carlos Lima",
+    "created_at": "2025-08-02T12:35:00Z",
+    "products": [
+      { "name": "Torta de Frango", "sku": "TF-001", "price": 8.0, "quantity": 1 },
+      { "name": "Coca-Cola 2L", "sku": "CC-2L", "price": 8.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "40",
+    "name": "João Silva",
+    "created_at": "2025-08-02T16:10:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 2 },
+      { "name": "Suco Natural", "sku": "SN-001", "price": 7.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "41",
+    "name": "Lucia Costa",
+    "created_at": "2025-08-03T10:45:00Z",
+    "products": [
+      { "name": "Vitamina de Frutas", "sku": "VF-001", "price": 8.5, "quantity": 1 },
+      { "name": "Pastel de Frango", "sku": "PF-001", "price": 5.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "42",
+    "name": "Roberto Ferreira",
+    "created_at": "2025-08-03T11:30:00Z",
+    "products": [
+      { "name": "Pão de Queijo", "sku": "PQ-001", "price": 5.0, "quantity": 4 },
+      { "name": "Café Expresso", "sku": "CF-001", "price": 4.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "43",
+    "name": "Ana Souza",
+    "created_at": "2025-08-03T12:00:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 1 },
+      { "name": "Esfiha de Carne", "sku": "EF-001", "price": 4.5, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "44",
+    "name": "João Silva",
+    "created_at": "2025-08-03T18:15:00Z",
+    "products": [
+      { "name": "Açaí 500ml", "sku": "AC-500", "price": 12.0, "quantity": 1 },
+      { "name": "Guaraná 1L", "sku": "GUA-1L", "price": 6.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "45",
+    "name": "Fernanda Alves",
+    "created_at": "2025-08-04T09:20:00Z",
+    "products": [
+      { "name": "Sanduíche Natural", "sku": "SN-002", "price": 9.0, "quantity": 1 },
+      { "name": "Agua Mineral", "sku": "AG-001", "price": 3.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "46",
+    "name": "Maria Oliveira",
+    "created_at": "2025-08-04T12:45:00Z",
+    "products": [
+      { "name": "Pão de Queijo", "sku": "PQ-001", "price": 5.0, "quantity": 5 },
+      { "name": "Coca-Cola 2L", "sku": "CC-2L", "price": 8.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "47",
+    "name": "Carlos Lima",
+    "created_at": "2025-08-04T13:10:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 3 },
+      { "name": "Suco Natural", "sku": "SN-001", "price": 7.0, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "48",
+    "name": "Marcos Pereira",
+    "created_at": "2025-08-04T15:00:00Z",
+    "products": [
+      { "name": "Cappuccino", "sku": "CP-001", "price": 6.0, "quantity": 2 },
+      { "name": "Croissant", "sku": "CR-001", "price": 7.5, "quantity": 1 }
+    ]
+  },
+  {
+    "_id": "49",
+    "name": "João Silva",
+    "created_at": "2025-08-05T11:30:00Z",
+    "products": [
+      { "name": "Coxinha", "sku": "CX-001", "price": 6.0, "quantity": 5 },
+      { "name": "Guaraná 1L", "sku": "GUA-1L", "price": 6.5, "quantity": 2 }
+    ]
+  },
+  {
+    "_id": "50",
+    "name": "Bruna Rocha",
+    "created_at": "2025-08-05T14:20:00Z",
+    "products": [
+      { "name": "Torta de Frango", "sku": "TF-001", "price": 8.0, "quantity": 1 },
+      { "name": "Vitamina de Frutas", "sku": "VF-001", "price": 8.5, "quantity": 1 }
+    ]
   }
 ]
 
 
-dataset_id = "probable-bebop-386417.TesteBigQuery.VendasLBC"
+dataset_id = "teste3-465312.TesteBigQuery.VendasLBC"
 
 # 4. Inserir dados no BigQuery:
 def inserir_dados_bigquery():
@@ -140,6 +497,69 @@ def inserir_dados_bigquery():
       print("Dados inseridos com sucesso")
    except Exception as e:
       print(f"Erro ao inserir dados: {e}")
+
+# 4.1 Inserir dados usando Job Loading (permite UPDATE/DELETE imediatos)
+def inserir_dados_bigquery_job_loading():
+    """Insere dados usando job loading - permite UPDATE/DELETE imediatos"""
+    try:
+        # Buscar o schema da tabela para evitar conflitos
+        table_schema = cliente.get_table(dataset_id).schema
+       
+        
+        with open("exemplos.json", 'rb') as source_file:
+            job = cliente.load_table_from_file(
+                source_file,
+                dataset_id,
+                job_config=bigquery.LoadJobConfig(
+                    source_format=bigquery.SourceFormat.NEWLINE_DELIMITED_JSON,
+                    schema=table_schema,  # Schema definido manualmente
+                    write_disposition=bigquery.WriteDisposition.WRITE_APPEND  # Adiciona aos dados existentes
+                )
+            )
+        
+        # Aguardar o job terminar
+        job.result()
+        
+        
+        print("✓ Dados inseridos via Job Loading - UPDATE/DELETE disponíveis imediatamente!")
+        
+    except Exception as e:
+        print(f"✗ Erro ao inserir dados via job loading: {e}")
+
+# 4.2 Inserir dados usando query INSERT (permite UPDATE/DELETE imediatos)
+def inserir_dados_bigquery_via_query():
+    """Insere dados usando INSERT query - permite UPDATE/DELETE imediatos"""
+    try:
+        
+        valores_insert = []
+        for exemplo in exemplos: 
+            # Converter products para formato JSON string
+            struct = f"STRUCT('{exemplo['name']}' as name, '{exemplo['sku']}' as sku, {exemplo['price']} as price, {exemplo['quantity']} as quantity)"
+            products_json = str(exemplo['products']).replace("'", '"')
+            
+            valor = f"""(
+                '{exemplo['_id']}',
+                '{exemplo['name']}',
+                TIMESTAMP('{exemplo['created_at']}'),
+                PARSE_JSON('{products_json}')
+            )"""
+            valores_insert.append(valor)
+        
+        valores_str = ',\n'.join(valores_insert)
+        
+        query = f"""
+        INSERT INTO `{dataset_id}` (_id, name, created_at, products)
+        VALUES {valores_str}
+        """
+        
+        
+        job = cliente.query(query)
+        result = job.result()
+        
+        print("✓ Dados inseridos via INSERT query - UPDATE/DELETE disponíveis imediatamente!")
+        
+    except Exception as e:
+        print(f"✗ Erro ao inserir dados via query: {e}")
 
       
 # 5. Ler dados da tabela - FORMA SIMPLES SEM PANDAS:
@@ -507,18 +927,17 @@ def atualizar_dados_bigquery_setar_novo_nome_no_pedido(id_pedido, novo_nome):
    
 
 if __name__ == "__main__":
-   
+    
     inserir_dados_bigquery()
+    inserir_dados_bigquery_job_loading()
+    inserir_dados_bigquery_via_query()
     ler_dados_bigquery()
     ler_dados_simples()
-    ler_um_registro()
     contar_registros()
     buscar_pedido_simples("1")
     ver_produtos_pedido("1")
-    deletar_dados_bigquery()
-    deletar_por_id("1")
-    deletar_por_cliente("João Silva")
-    deletar_por_data("2025-06-20")
-    deletar_por_produto("Coxinha")
-    atualizar_dados_bigquery_setar_novo_nome_no_pedido("1", "João Silva")
+    atualizar_dados_bigquery_setar_novo_nome_no_pedido("1", "João Silva Atualizado")
+    buscar_pedido_simples("1")
+    deletar_por_id("2")
+    contar_registros()
 
